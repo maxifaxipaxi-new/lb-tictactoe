@@ -14,7 +14,7 @@ CreateThread(function ()
             defaultApp = Config.defaultApp, 
             size = Config.size, 
             price = Config.price, 
-            images = {"https://media.discordapp.net/attachments/1209142516461338696/1214301552307736598/Bildschirmfoto_2024-03-04_um_21.00.20.png?ex=65f89d72&is=65e62872&hm=5534c63ae83296be7f5fa55da95740256496d73f5190c80ec5a325329c1aa4a2&=&format=webp&quality=lossless&width=552&height=1052"}, -- OPTIONAL array of images for the app on the app store
+            images = {"https://tictac.mfpscripts.com/images/image1.png", "https://tictac.mfpscripts.com/images/image2.png"}, -- OPTIONAL array of images for the app on the app store
             ui = GetCurrentResourceName() .. "/ui/index.html", 
             icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/assets/icon.png"
         })
@@ -52,6 +52,7 @@ AddEventHandler('onResourceStart', function(resourceName)
    print("| | | |   __|   __|__   |   --|    -|-   -|   __| | | |__   |")
    print("|_|_|_|__|  |__|  |_____|_____|__|__|_____|__|    |_| |_____|")
    print("The resource " .. resourceName .. " has been started")
+   print("More free LB-Phone Apps at lb.mfpscripts.com! Visit now!")
  end)
  
  AddEventHandler('onResourceStop', function(resourceName)
