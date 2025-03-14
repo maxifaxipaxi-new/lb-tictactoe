@@ -4,7 +4,8 @@
 TicTacToe, the timeless classic, is now available at your fingertips with our immersive and engaging app for LB-Phone! 
 Experience the thrill of this strategic game as you challenge friends, family, or even test your skills against our intelligent AI opponent.
 
-![banner-tictactoe](https://github.com/maxifaxipaxi-new/lb-tictactoe/assets/115405418/11a9597f-6071-496e-b944-8a2d09cc13d0)
+![Kopie von Kopie von Kopie von Kopie von Kopie von Kopie von Kopie von Kopie von Kopie von Kopie von Kopie von NGU-Rp com](https://github.com/user-attachments/assets/82427ca1-4dc6-496b-9b14-e969f0dc4b25)
+
 
 Get ready to relive the nostalgia and excitement of TicTacToe with our feature-rich app. Download now and become the ultimate TicTacToe champion!
 
