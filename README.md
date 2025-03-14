@@ -1,4 +1,6 @@
-# TicTacToe - the hardest game for LB-Phone
+# TicTacToe - the hardest game for LB-Phone & LB-Tablet
+
+## UPDATE: Now available for LB-Tablet aswell!
 TicTacToe, the timeless classic, is now available at your fingertips with our immersive and engaging app for LB-Phone! 
 Experience the thrill of this strategic game as you challenge friends, family, or even test your skills against our intelligent AI opponent.
 
