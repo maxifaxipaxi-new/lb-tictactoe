@@ -1,4 +1,5 @@
-local identifier = "mfp-lb-tictac-tablet"
+local identifierPhone = "mfp-lb-tictac-phone"
+local identifierTablet = "mfp-lb-tictac-tablet"
 local useTablet = false
 local usePhone = false
 
@@ -11,41 +12,41 @@ CreateThread(function ()
     end
 
     local function AddTabletApp()
-        local added, errorMessage = exports["lb-tablet"]:AddCustomApp({
-            identifier = identifier,
-            name = Config.name,
-            description = Config.description,
-            developer = "MFPSCRIPTS.com", -- please leave this, it would be fair for a free app (-;
-            defaultApp = Config.defaultApp, 
-            size = Config.size, 
-            price = Config.price, 
-            images = {"https://tictac.mfpscripts.com/images/image1.png", "https://tictac.mfpscripts.com/images/image2.png"}, -- OPTIONAL array of images for the app on the app store
-            ui = GetCurrentResourceName() .. "/ui/tablet/index.html", 
-            icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/icon.png"
-        })
-
-        if not added then
-            print("Could not add app:", errorMessage)
-        end
-    end
-
-      local function AddPhoneApp()
-        local added, errorMessage = exports["lb-tablet"]:AddCustomApp({
-            identifier = identifier,
-            name = Config.name,
-            description = Config.description,
-            developer = "MFPSCRIPTS.com", -- please leave this, it would be fair for a free app (-;
-            defaultApp = Config.defaultApp, 
-            size = Config.size, 
-            price = Config.price, 
-            images = {"https://tictac.mfpscripts.com/images/image1.png", "https://tictac.mfpscripts.com/images/image2.png"}, -- OPTIONAL array of images for the app on the app store
-            ui = GetCurrentResourceName() .. "/ui/phone/index.html", 
-            icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/icon.png"
-        })
-
-        if not added then
-            print("Could not add app:", errorMessage)
-        end
+      local added, errorMessage = exports["lb-tablet"]:AddCustomApp({
+          identifier = identifierTablet,
+          name = Config.name,
+          description = Config.description,
+          developer = "MFPSCRIPTS.com", 
+          defaultApp = Config.defaultApp, 
+          size = Config.size, 
+          price = Config.price, 
+          images = {"https://tictac.mfpscripts.com/images/image1.png", "https://tictac.mfpscripts.com/images/image2.png"}, 
+          ui = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/main.html", 
+          icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/icon.png"
+      })
+  
+      if not added then
+          print("Could not add Tablet App:", errorMessage)
+      end
+  end
+  
+  local function AddPhoneApp()
+      local added, errorMessage = exports["lb-phone"]:AddCustomApp({
+          identifier = identifierPhone,
+          name = Config.name,
+          description = Config.description,
+          developer = "MFPSCRIPTS.com", 
+          defaultApp = Config.defaultApp, 
+          size = Config.size, 
+          price = Config.price, 
+          images = {"https://tictac.mfpscripts.com/images/image1.png", "https://tictac.mfpscripts.com/images/image2.png"}, 
+          ui = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/main.html", 
+          icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/icon.png"
+      })
+  
+      if not added then
+          print("Could not add Phone App:", errorMessage)
+      end
   end
     
     if useTablet then
@@ -67,6 +68,14 @@ CreateThread(function ()
     end)
 end)
 
+RegisterNUICallback("getDevice", function(data, cb)
+  if data.type == "phone" then
+      SendNUIMessage({ device = "phone" })
+  elseif data.type == "tablet" then
+      SendNUIMessage({ device = "tablet" })
+  end
+  cb("ok")
+end)
 
 
 
