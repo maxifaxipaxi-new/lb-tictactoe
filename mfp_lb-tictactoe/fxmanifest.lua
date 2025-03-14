@@ -1,8 +1,8 @@
 fx_version "cerulean"
 game "gta5"
 
-title "LB Phone - FlappyBird-App"
-description "Integrate Games like FlappyBird to LB"
+title "LB Phone - TicTacToe-App"
+description "Integrate Games like TicTacToe to LB"
 author "MFPSCRIPTS"
 version '1.0'
 
